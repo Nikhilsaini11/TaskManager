@@ -40,16 +40,18 @@ A full-stack Task Management Application built using Angular (frontend) and Node
 3. **Run the backend**
 
     ```bash
-    cd backend
+    cd ../backend
     npm start
+    
+4. **Let the backend run and open another terminal**
 
-4. **Build and serve the frontend**
+5. **Serve the frontend**
 
     ```bash
-    cd ../taskmanager
+    cd taskmanager
     npm start
 
-5. **Open the application in your browser**
+6. **Open the application in your browser**
 
     ```bash
     http://localhost:4200
