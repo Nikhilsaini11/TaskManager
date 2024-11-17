@@ -26,6 +26,14 @@ export class LoginComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(3)]]
     });
+
+    if (isPlatformBrowser(this.platformId)) {
+
+      if(localStorage.getItem('authToken')){
+
+        this.router.navigate(['/home']);
+      }
+    }
   }
 
   get email() {
