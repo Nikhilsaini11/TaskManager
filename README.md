@@ -23,7 +23,7 @@ A full-stack Task Management Application built using Angular (frontend) and Node
 1. **Clone the repository**
 
     ```bash
-    git clone https://github.com/Nikhilsaini11/TaskManager
+    git clone https://github.com/Nikhilsaini11/TaskManager.git
     cd TaskManager
 
 2. **Install dependencies for both frontend and backend**
