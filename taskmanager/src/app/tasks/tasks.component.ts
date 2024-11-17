@@ -21,6 +21,8 @@ export class TasksComponent implements OnInit {
   task!: FormGroup;
 
   tasks: any[] = [];
+  tasksBackup: any[] = []; 
+  selectedStatus: string = '';
 
   constructor(private taskService: TasksService, private fb: FormBuilder, private router: Router, @Inject(PLATFORM_ID) private platformId: Object) { }
 
@@ -85,6 +87,7 @@ export class TasksComponent implements OnInit {
     this.taskService.getTasks().subscribe({
       next: (data) => {
         this.tasks = data;
+        this.tasksBackup = data;
         this.isLoading = false;
       },
       error: (err) => {
@@ -92,6 +95,15 @@ export class TasksComponent implements OnInit {
         this.isLoading = false;
       },
     });
+  }
+
+  filterTasks(status: string): void {
+    this.selectedStatus = status;
+    if (status) {
+      this.tasks = this.tasksBackup.filter(task => task.status.toLowerCase() === status.toLowerCase());
+    } else {
+      this.tasks = [...this.tasksBackup];
+    }
   }
 
   handleRefreshTaskList(taskId: string): void {

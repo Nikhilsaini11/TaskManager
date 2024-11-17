@@ -6,8 +6,8 @@ A full-stack Task Management Application built using Angular (frontend) and Node
 
 - User Authentication: Sign up, login, and token-based session management.
 - Task Management:
-- Create, read, update, and delete tasks.
-- Filter tasks by their status (completed/pending).
+    - Create, read, update and delete tasks.
+    - Filter tasks by their status (completed/pending)
 - Responsive Design: Fully responsive UI using Tailwind CSS.
 - Secure API: Backend secured with JWT authentication.
 
